@@ -139,12 +139,12 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bmp.cpp" />
+    <ClCompile Include="bmploader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="message.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bmp.h" />
+    <ClInclude Include="bmploader.h" />
     <ClInclude Include="message.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
