@@ -6,13 +6,13 @@ int main()
 {
     try
     {
-        BmpImage bmp = load_bmp("apple.bmp");
+        BmpImage bmp = load_bmp("input/image.bmp");
 
-        std::cout << "Loaded apple.bmp (" << bmp.width << " x " << bmp.height << ")" << std::endl;
+        std::cout << "Loaded image.bmp (" << bmp.width << " x " << bmp.height << ")" << std::endl;
         std::cout << "Pixel offset: " << bmp.pixel_offset << std::endl;
         std::cout << "Row stride  : " << bmp.stride << std::endl;
 
-        save_bmp("copy.bmp", bmp);
+        save_bmp("output/copy.bmp", bmp);
         std::cout << "Saved copy.bmp successfully!" << std::endl;
     }
     catch (const std::exception& e)

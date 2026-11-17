@@ -93,7 +93,7 @@ BmpImage load_bmp(const std::string& file_path)
 
     if (pixel_offset < 54 || pixel_offset + height * stride > image_bytes.size())
     {
-        throw std::runtime_error("bmp file is cutted or corrupted");
+        throw std::runtime_error("bmp file is cuttted or corrupted");
     }
 
     BmpImage bmp;
