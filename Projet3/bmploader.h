@@ -17,3 +17,5 @@ struct BmpImage
 BmpImage load_bmp(const std::string& file_path);
 
 void save_bmp(const std::string& output_path, const BmpImage& bmp);
+
+void copy_bmp(const std::string& source_path, const std::string& output_path);

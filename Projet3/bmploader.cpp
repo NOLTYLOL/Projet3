@@ -125,3 +125,9 @@ void save_bmp(const std::string& output_path, const BmpImage& bmp)
     write_file.write(bmp.image_bytes.data(), bmp.image_bytes.size());
     write_file.close();
 }
+
+void copy_bmp(const std::string& source_path, const std::string& output_path)
+{
+    BmpImage bmp = load_bmp(source_path);
+    save_bmp(output_path, bmp);
+}
