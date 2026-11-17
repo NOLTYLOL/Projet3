@@ -43,7 +43,14 @@ CliArgs parse_arguments(int argc, char* argv[])
         }
 
         args.source_path = argv[2];
-        args.dest_path = (argc == 4) ? argv[3] : "copy.bmp";
+        if (argc == 4)
+        {
+            args.dest_path = argv[3];
+        }
+        else
+        {
+            args.dest_path = "copy.bmp";
+        }
 
         if (args.source_path == args.dest_path)
         {
