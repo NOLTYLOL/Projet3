@@ -1,9 +1,19 @@
 #include "bmploader.h"
 #include <iostream>
 #include <stdexcept>
+#include <filesystem>
 
 int main()
 {
+
+
+  
+        std::cout
+            << "Working Directory : "
+            << std::filesystem::current_path()
+            << '\n';
+   
+
     try
     {
         BmpImage bmp = load_bmp("input/image.bmp");

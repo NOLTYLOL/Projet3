@@ -140,12 +140,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bmploader.cpp" />
+    <ClCompile Include="cli.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="message.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bmploader.h" />
+    <ClInclude Include="cli.h" />
     <ClInclude Include="message.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Projet3.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
