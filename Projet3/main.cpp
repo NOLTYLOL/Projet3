@@ -1,5 +1,6 @@
 #include "bmploader.h"
 #include "cli.h"
+#include "message.h"
 #include <iostream>
 
 int main(int argc, char* argv[])
@@ -15,29 +16,21 @@ int main(int argc, char* argv[])
         }
         else if (args.command == "encode")
         {
-            std::cout << "Command : " << args.command << std::endl;
-            std::cout << "Source  : " << args.source_path << std::endl;
-            std::cout << "Dest    : " << args.dest_path << std::endl;
-            std::cout << "Message : " << args.message << std::endl;
-            std::cout << "Key     : " << args.key << std::endl;
-
             BmpImage bmp = load_bmp(args.source_path);
             std::cout << "Loaded BMP (" << bmp.width << " x " << bmp.height << ")" << std::endl;
 
-            // Faudra la fonction encode ici
+            encode_message(bmp, args.message, args.key);
 
             save_bmp(args.dest_path, bmp);
-            std::cout << "Saved " << args.dest_path << " successfully!" << std::endl;
+            std::cout << "Message encoded into " << args.dest_path << " successfully!" << std::endl;
         }
         else if (args.command == "decode")
         {
-            std::cout << "Command : " << args.command << std::endl;
-            std::cout << "Source  : " << args.source_path << std::endl;
-            std::cout << "Key     : " << args.key << std::endl;
             BmpImage bmp = load_bmp(args.source_path);
             std::cout << "Loaded BMP (" << bmp.width << " x " << bmp.height << ")" << std::endl;
 
-            // Faudra la fonction decode ici
+            std::string secret = decode_message(bmp, args.key);
+            std::cout << "Decoded message: " << secret << std::endl;
         }
     }
     catch (const std::exception& e)

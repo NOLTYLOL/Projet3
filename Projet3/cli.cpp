@@ -5,11 +5,6 @@
 
 void print_help()
 {
-    std::cout << "Usage:\n";
-    std::cout << "  projet3.exe help\n";
-    std::cout << "  projet3.exe copy <source.bmp> [dest.bmp]\n";
-    std::cout << "  projet3.exe encode <source.bmp> <dest.bmp> \"<message>\" [key]\n";
-    std::cout << "  projet3.exe decode <source.bmp> [key]\n\n";
     std::cout << "Examples:\n";
     std::cout << "  projet3.exe copy /path/to/apple.bmp /path/to/copy.bmp\n";
     std::cout << "  projet3.exe encode /path/to/apple.bmp /path/to/secret.bmp \"Secret Message\"\n";
