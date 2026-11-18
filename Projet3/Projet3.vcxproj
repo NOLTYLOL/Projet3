@@ -153,9 +153,6 @@
     <ClInclude Include="message.h" />
     <ClInclude Include="Steganography.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Projet3.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
